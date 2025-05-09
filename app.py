@@ -55,6 +55,6 @@ with Tab3:
  
     if st.button ("Predecir"):
         Predecir = modelo.predict(np.array([[prom_colegio, ACT, capar_clase]]))
-        st.write(Predecir [0])
+        st.write(f"El promedio es: {Predecir [0]}")
  
 print(10)
