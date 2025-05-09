@@ -40,7 +40,7 @@ with Tab2:
     fig2 = px.scatter(gpa, x='prom_colegio', y='prom_uni', title='Promedio en la U vs Promedio en el colegio')
     st.plotly_chart(fig2)
 
-    fig3 = px.scattter(gpa, x='capar_clase', y='prom_uni', title='Promedio en la U vs Cant. veces que faltó a clase')
+    fig3 = px.scatter(gpa, x='capar_clase', y='prom_uni', title='Promedio en la U vs Cant. veces que faltó a clase')
     st.plotly_chart(fig3)
  
 
