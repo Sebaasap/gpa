@@ -12,23 +12,23 @@ with open("model.pickle", "rb") as m:
     modelo = pkl.load(m)
 
 Tab1, Tab2, Tab3 = st.tabs(['Analisis Univariado', 'Analisis Bivariado', 'Modelo'])
- 
+colores= ['#81D2C7', '#B5BAD0', '#7389AE', '#416788']
 with Tab1:
    st.subheader("Estadísticas descriptivas - Variables numéricas")
    st.dataframe(gpa[['prom_uni', 'prom_colegio', 'ACT', 'capar_clase']].describe())
  
    st.subheader("Distribución de variables numéricas")
  
-   fig = px.histogram(gpa, x='prom_uni', title='prom universidad')
+   fig = px.histogram(gpa, x='prom_uni', title='prom universidad', color_discrete_sequence=[colores[0]])
    st.plotly_chart(fig)
  
-   fig2 = px.histogram(gpa, x='prom_colegio', title='prom colegio')
+   fig2 = px.histogram(gpa, x='prom_colegio', title='prom colegio', color_discrete_sequence=[colores[1]])
    st.plotly_chart(fig2)
  
-   fig3 = px.histogram(gpa, x='ACT', title='prom prueba ACT')
+   fig3 = px.histogram(gpa, x='ACT', title='prom prueba ACT', color_discrete_sequence=[colores[2]])
    st.plotly_chart(fig3)
  
-   fig4 = px.histogram(gpa, x='capar_clase', title='prom de faltas a clase')
+   fig4 = px.histogram(gpa, x='capar_clase', title='prom de faltas a clase', color_discrete_sequence=[colores[3]])
    st.plotly_chart(fig4)
 
 with Tab2:
