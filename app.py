@@ -34,15 +34,14 @@ with Tab1:
 with Tab2:
     st.subheader("Relación entre variables y el promedio ponderado en la U")
  
-    fig1 = px.scatter(gpa, x='ACT', y='prom_uni', title='Promedio en la Uni vs Puntaje ACT')
+    fig1 = px.scatter(gpa, x='ACT', y='prom_uni', color='prom_uni', color_continuous_scale='Viridis', title='Promedio en la Uni vs Puntaje ACT')
     st.plotly_chart(fig1)
  
-    fig2 = px.scatter(gpa, x='prom_colegio', y='prom_uni', title='Promedio en la U vs Promedio en el colegio')
+    fig2 = px.scatter(gpa, x='prom_colegio', y='prom_uni', color='prom_colegio', color_continuous_scale='Cividis',title='Promedio en la U vs Promedio en el colegio')
     st.plotly_chart(fig2)
 
-    fig3 = px.scatter(gpa, x='capar_clase', y='prom_uni', title='Promedio en la U vs Cant. veces que faltó a clase')
+    fig3 = px.scatter(gpa, x='capar_clase', y='prom_uni', color='capar_clase', color_continuous_scale='Plasma', title='Promedio en la U vs Cant. veces que faltó a clase')
     st.plotly_chart(fig3)
- 
 
 with Tab3:
     st.title("Modelo")
